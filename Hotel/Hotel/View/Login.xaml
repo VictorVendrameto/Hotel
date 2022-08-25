@@ -11,14 +11,18 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <Frame CornerRadius="10" x:Name="frm_dados" VerticalOptions="CenterAndExpand">
+            
+            <Frame CornerRadius="10" x:Name="frm_dados" VerticalOptions="CenterAndExpand" Opacity="0.4">
 
                 <StackLayout>
-                    <Label x:Name="lbl_welcome"/>
-                    <Button Text="Desconectar" Clicked="Button_Clicked"/>
+                    <Label Text="Login Usuario"/>
+                    <Label Text="Email:"/>
+                    <Entry x:Name="user_email"/>
+                    <Label Text="Senha:"/>
+                    <Entry IsPassword="True" x:Name="user_pw"/>
+                    <Button Text="Conectar" Clicked="Button_Clicked"/>
                 </StackLayout>
-                
-                
+
             </Frame>
         </StackLayout>
     </ContentPage.Content>

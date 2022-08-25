@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace Hotel.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Protegida : ContentPage
+    public partial class Hospedagem : ContentPage
     {
-        public Protegida()
+        public Hospedagem()
         {
             InitializeComponent();
         }

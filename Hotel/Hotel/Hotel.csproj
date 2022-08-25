@@ -16,10 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="View\Login.xaml">
+    <EmbeddedResource Update="View\Hospedagem.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Protegida.xaml">
+    <EmbeddedResource Update="View\Login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

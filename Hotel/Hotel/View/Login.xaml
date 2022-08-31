@@ -11,15 +11,22 @@
     
     <ContentPage.Content>
         <StackLayout>
-
-            <Frame CornerRadius="10" x:Name="frm_dados" VerticalOptions="CenterAndExpand" BackgroundColor="#080930" BorderColor="White" Opacity="0.90">
+            <Image x:Name="logo" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+            <Frame CornerRadius="10" x:Name="frm_dados" VerticalOptions="CenterAndExpand" 
+                   BackgroundColor="#080930" BorderColor="White" Opacity="0.90">
 
                 <StackLayout>
                     <Label Text="Login Usuario" TextColor="White" FontSize="Title" HorizontalOptions="Center"/>
+                    
                     <Label Text="Email:" TextColor="White" FontSize="Large"/>
-                    <Entry x:Name="user_email" TextColor="White"/>
+                    
+                    <Entry x:Name="user_email" TextColor="White" Placeholder="Insira seu email" 
+                                                                        PlaceholderColor="White"/>
                     <Label Text="Senha:" TextColor="White"/>
-                    <Entry IsPassword="True" x:Name="user_pw"/>
+                    
+                    <Entry IsPassword="True" x:Name="user_pw" Placeholder="Insira sua senha" TextColor="White" 
+                                                                    PlaceholderColor="White"/>
+                    
                     <Button Text="Conectar" Clicked="Button_Clicked"/>
                 </StackLayout>
 

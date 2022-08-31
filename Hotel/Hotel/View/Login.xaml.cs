@@ -20,10 +20,14 @@ namespace Hotel.View
             NavigationPage.SetHasNavigationBar(this, false);
 
             PropriedadesApp = (App)Application.Current;
+
+            logo.Source = ImageSource.FromResource("Hotel.Imagens.hotel.png");
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+
+            //dados pro login
             string user = user_email.Text;
             string password = user_pw.Text;
 
@@ -36,6 +40,10 @@ namespace Hotel.View
             {
                 App.Current.Properties.Add("user_logado", user);
                 App.Current.MainPage = new NavigationPage(new View.ContratacaoHosp());
+            }
+            else
+            {
+                DisplayAlert("Ops!", "Usuário ou senha inválidos", "OK");
             }
         }
     }

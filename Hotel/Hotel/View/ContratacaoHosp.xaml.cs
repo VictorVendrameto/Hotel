@@ -12,9 +12,15 @@ namespace Hotel.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ContratacaoHosp : ContentPage
     {
+        App PropriedadesApp;
         public ContratacaoHosp()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+
+            PropriedadesApp = (App)Application.Current;
+
+            lbl_user.Text = App.Current.Properties["user_logado"].ToString();
         }
     }
 }

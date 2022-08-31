@@ -30,7 +30,7 @@ namespace Hotel
             InitializeComponent();
 
             if (Properties.ContainsKey("usuario_logado"))
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new View.ContratacaoHosp());
             else MainPage = new Login();
         }
 

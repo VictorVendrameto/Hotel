@@ -22,12 +22,13 @@
                     
                     <Entry x:Name="user_email" TextColor="White" Placeholder="Insira seu email" 
                                                                         PlaceholderColor="White"/>
-                    <Label Text="Senha:" TextColor="White"/>
+                    <Label Text="Senha:" TextColor="White" FontSize="Large"/>
                     
                     <Entry IsPassword="True" x:Name="user_pw" Placeholder="Insira sua senha" TextColor="White" 
                                                                     PlaceholderColor="White"/>
-                    
-                    <Button Text="Conectar" Clicked="Button_Clicked"/>
+
+                    <Button Text="Conectar" TextColor="White" Clicked="Button_Clicked" 
+                            BackgroundColor="#211857"/>
                 </StackLayout>
 
             </Frame>

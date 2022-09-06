@@ -11,9 +11,13 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Calcular Hospedagem" FontSize="Title" HorizontalOptions="Center" TextColor="White"/>
-
-            <Label x:Name="lbl_user" HorizontalOptions="Center" TextColor="White"/>
+            <Label Text="Detalhes da Estádia" FontSize="Title" HorizontalOptions="Center" TextColor="White"/>
+            <Label Text="{Binding Path=QuartoSelec}"/>
+            <Frame CornerRadius="10" VerticalOptions="CenterAndExpand" 
+                   BackgroundColor="#080930" BorderColor="White" Opacity="0.90">
+                
+            </Frame>
+            
 
         </StackLayout>
     </ContentPage.Content>

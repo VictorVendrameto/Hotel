@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotel.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,14 +39,40 @@ namespace Hotel.View
             dtp_checkout.MinimumDate = elemento.Date.AddDays(1);
             dtp_checkout.MaximumDate = elemento.Date.AddDays(1).AddMonths(4);
         }
+
+        //calcular a hospedagem
         private void Button_Clicked(object sender, EventArgs e)
         {
-
+            try
+            {
+                Navigation.PushAsync(new Hospedagem()
+                {
+                    BindingContext = new Hospedagem()
+                    {
+                        qnt_Adult = Convert.ToInt32(lbl_qnt_adult.Text),
+                        qnt_Kid = Convert.ToInt32(lbl_qnt_kid.Text),
+                        QuartoSelec = (Suit)pck_suit.SelectedItem,
+                        DataCheckIn = dtp_checkin.Date,
+                        DataCheckOut = dtp_checkout
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Ops", ex.Message, "OK");
+            }
         }
 
-        private void btnSair_Clicked(object sender, EventArgs e)
+        private async void btnSair_Clicked(object sender, EventArgs e)
         {
-
+            bool confirm = await DisplayAlert("Você deseja",
+                                                "Desconectar a sua conta?",
+                                                "Sim", "Não");
+            if (confirm)
+            {
+                App.Current.Properties.Remove("usuario_logado");
+                App.Current.MainPage = new Login();
+            }
         }
     }  
 }

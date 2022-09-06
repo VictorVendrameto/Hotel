@@ -15,6 +15,8 @@ namespace Hotel.View
         public Hospedagem()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

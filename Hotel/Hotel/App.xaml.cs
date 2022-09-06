@@ -10,29 +10,38 @@ namespace Hotel
 {
     public partial class App : Application
     {
-        public List<UserData> list_user = new List<UserData>
-        {
-            new UserData()
-            {
-                Email = "victor@gmail",
-                Nome = "Victor",
-                Password = "4444"
-            },
-            new UserData()
-            {
-                Email = "vini@gmail",
-                Nome = "Vinicius",
-                Password = "5555"
-            }
-        };
         public App()
         {
             InitializeComponent();
 
             if (Properties.ContainsKey("usuario_logado"))
-            MainPage = new NavigationPage(new View.ContratacaoHosp());
+                MainPage = new NavigationPage(new View.ContratacaoHosp());
             else MainPage = new Login();
         }
+
+        public List<Suit> list_suit = new List<Suit>
+        {
+            new Suit()
+            {
+                Nome = "Deluxe",
+                DiaryAdult = 95.0,
+                DiaryKid = 48.0
+            },
+
+            new Suit()
+            {
+                Nome = "Executivo",
+                DiaryAdult = 70.0,
+                DiaryKid = 42.0
+            },
+
+            new Suit()
+            {
+                Nome = "Padrão",
+                DiaryAdult = 65.0,
+                DiaryKid = 35.0
+            }
+        };
 
         protected override void OnStart()
         {

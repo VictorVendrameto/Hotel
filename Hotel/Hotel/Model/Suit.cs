@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Hotel.Model
 {
-    public class UserData
+    public class Suit
     {
-        public string Email { get; set; }
-        public string Password { get; set; }
         public string Nome { get; set; }
+        public string DiaryAdult { get; set; }
+        public string DiaryKid { get; set; }
     }
 }

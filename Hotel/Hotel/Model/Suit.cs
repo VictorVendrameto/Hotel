@@ -7,7 +7,7 @@ namespace Hotel.Model
     public class Suit
     {
         public string Nome { get; set; }
-        public string DiaryAdult { get; set; }
-        public string DiaryKid { get; set; }
+        public double DiaryAdult { get; set; }
+        public double DiaryKid { get; set; }
     }
 }

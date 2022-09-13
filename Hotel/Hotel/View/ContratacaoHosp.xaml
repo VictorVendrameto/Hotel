@@ -48,7 +48,7 @@
                     </Grid>
 
                     <Label Text="Escolha o tipo de Suíte" HorizontalTextAlignment="Center" TextColor="White"/>
-                    <Picker x:Name="pck_suit" ItemDisplayBinding="{Binding Nome}" Title="Escolha a acomodação" FontSize="Subtitle" 
+                    <Picker x:Name="pck_suit" ItemDisplayBinding="{Binding Nome}" TextColor="White" Title="Escolha a acomodação" FontSize="Subtitle" 
                             TitleColor="White"/>
                     <Frame CornerRadius="10" VerticalOptions="CenterAndExpand" 
                    BackgroundColor="#211857" BorderColor="White" Opacity="0.90">

@@ -12,12 +12,57 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Detalhes da Estádia" FontSize="Title" HorizontalOptions="Center" TextColor="White"/>
-            <Label Text="{Binding Path=QuartoSelec}"/>
+            <Label Text="{Binding Path=QuartoSelec.Nome}"/>
             <Frame CornerRadius="10" VerticalOptions="CenterAndExpand" 
                    BackgroundColor="#080930" BorderColor="White" Opacity="0.90">
-                
+                <StackLayout>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Adultos: " TextColor="White"/>
+                                <Span Text="{Binding qtn_Kid}" TextColor="White"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Crianças: " TextColor="White"/>
+                                <Span Text="{Binding qtn_Kid}" TextColor="White"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
             </Frame>
-            
+
+            <Frame CornerRadius="10" VerticalOptions="CenterAndExpand" 
+                   BackgroundColor="#080930" BorderColor="White" Opacity="0.90">
+                <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,*">
+                    <Label Grid.Row="0" Grid.Column="0" Text="Data CheckIn: " TextColor="White"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Data CheckOut: " TextColor="White"/>
+                    <Label Grid.Row="0" Grid.Column="2" Text="Data Estadia: " TextColor="White"/>
+
+                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}" TextColor="White"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyyy}'}" TextColor="White"/>
+                    <Label Grid.Row="1" Grid.Column="2" Text="{Binding Estadia}" TextColor="White"/>
+
+                </Grid>
+            </Frame>
+
+            <Frame CornerRadius="10" VerticalOptions="CenterAndExpand" 
+                   BackgroundColor="#080930" BorderColor="White" Opacity="0.90">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Valor da Hospedagem: " TextColor="White"/>
+                            <Span Text="{Binding TotalValue, StringFormat='{}{0:c}'}" FontSize="Title" TextColor="White"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+
+            <Button Text="Voltar" TextColor="White" BackgroundColor="#211857" Clicked="Button_Clicked"/>
 
         </StackLayout>
     </ContentPage.Content>

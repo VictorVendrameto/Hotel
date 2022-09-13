@@ -47,13 +47,13 @@ namespace Hotel.View
             {
                 Navigation.PushAsync(new Hospedagem()
                 {
-                    BindingContext = new Hospedagem()
+                    BindingContext = new Hosp()
                     {
                         qnt_Adult = Convert.ToInt32(lbl_qnt_adult.Text),
                         qnt_Kid = Convert.ToInt32(lbl_qnt_kid.Text),
                         QuartoSelec = (Suit)pck_suit.SelectedItem,
                         DataCheckIn = dtp_checkin.Date,
-                        DataCheckOut = dtp_checkout
+                        DataCheckOut = dtp_checkout.Date,
                     }
                 });
             }

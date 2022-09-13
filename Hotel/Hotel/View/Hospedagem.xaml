@@ -12,15 +12,15 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Detalhes da Estádia" FontSize="Title" HorizontalOptions="Center" TextColor="White"/>
-            <Label Text="{Binding Path=QuartoSelec.Nome}"/>
+            <Label Text="{Binding Path=QuartoSelec.Nome}" HorizontalOptions="Center"/>
             <Frame CornerRadius="10" VerticalOptions="CenterAndExpand" 
                    BackgroundColor="#080930" BorderColor="White" Opacity="0.90">
-                <StackLayout>
+                <StackLayout HorizontalOptions="Center">
                     <Label>
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Adultos: " TextColor="White"/>
-                                <Span Text="{Binding qtn_Kid}" TextColor="White"/>
+                                <Span Text="{Binding qnt_Adult}" TextColor="White"/>
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
@@ -29,7 +29,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Crianças: " TextColor="White"/>
-                                <Span Text="{Binding qtn_Kid}" TextColor="White"/>
+                                <Span Text="{Binding qnt_Kid}" TextColor="White"/>
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>

@@ -38,7 +38,7 @@ namespace Hotel.View
             //vai pra pagina de hospedagem
             if (user == user_correto && password == password_correto)
             {
-                App.Current.Properties.Add("user_logado", user);
+                Application.Current.Properties.Add("user_logado", user);
                 App.Current.MainPage = new NavigationPage(new View.ContratacaoHosp());
             }
             else

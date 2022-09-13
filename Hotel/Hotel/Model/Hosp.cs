@@ -12,17 +12,27 @@ namespace Hotel.Model
 
         public Suit QuartoSelec 
         { 
-            get => QuartoSelec;
+            get => quarto_selec;
             set
             {
                 if (value == null)
                     throw new Exception("Selecione um quarto");
 
-                QuartoSelec = value;
+                quarto_selec = value;
             }
         }
         public int qnt_Kid { get; set; }
-        public int qnt_Adult { get; set; }
+        public int qnt_Adult 
+        {
+            get => qnt_adult;
+                set
+            {
+                if (value == 0)
+                    throw new Exception("Por favor, selecione a quantidade de adultos");
+                
+                qnt_adult = value;
+            }
+                }
         public DateTime DataCheckIn { get; set; }
         public DateTime DataCheckOut { get; set; }
 

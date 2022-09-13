@@ -65,10 +65,10 @@ namespace Hotel.View
 
         private async void btnSair_Clicked(object sender, EventArgs e)
         {
-            bool confirm = await DisplayAlert("Você deseja",
+            bool confirme = await DisplayAlert("Você deseja",
                                                 "Desconectar a sua conta?",
                                                 "Sim", "Não");
-            if (confirm)
+            if (confirme)
             {
                 App.Current.Properties.Remove("usuario_logado");
                 App.Current.MainPage = new Login();

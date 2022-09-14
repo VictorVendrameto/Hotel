@@ -70,7 +70,7 @@ namespace Hotel.View
                                                 "Sim", "Não");
             if (confirme)
             {
-                App.Current.Properties.Remove("usuario_logado");
+                App.Current.Properties.Remove("user_logado");
                 App.Current.MainPage = new Login();
             }
         }

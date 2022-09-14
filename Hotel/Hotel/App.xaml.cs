@@ -16,7 +16,7 @@ namespace Hotel
 
             if (Properties.ContainsKey("usuario_logado"))
                 MainPage = new NavigationPage(new View.ContratacaoHosp());
-            else MainPage = new Login();
+            else MainPage = new NavigationPage (new View.Login());
         }
 
         public List<Suit> list_suit = new List<Suit>
